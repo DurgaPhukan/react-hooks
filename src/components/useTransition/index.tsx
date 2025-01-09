@@ -30,7 +30,9 @@ const UseTransitionComp = React.memo(() => {
             />
 
             {isPending && <div className="overflow-auto min-w-40 h-40 bg-green-400 flex flex-wrap gap-2 p-2 rounded-lg justify-center">
-                loading...
+                <h1 className="text-white font-bold">
+                    loading...
+                </h1>
             </div>}
             {!isPending && <div className="">
 
@@ -38,6 +40,9 @@ const UseTransitionComp = React.memo(() => {
                     {filteredItems.map((item) => (
                         <div className="text-green-700 font-medium bg-white p-2 rounded-md w-36 h-10 text-center" key={item}>{item}</div>
                     ))}
+                    {filteredItems.length === 0 && <h1 className="text-white font-bold">
+                        No Item Found!
+                    </h1>}
                 </div>
             </div>}
         </div>
