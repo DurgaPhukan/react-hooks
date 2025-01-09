@@ -28,7 +28,7 @@ const UseMemoComp = () => {
                 <div className='flex gap-4 flex-wrap p-2 justify-center h-36'>
                     {searchedFruit?.map((fruit, index) => (
                         <div key={fruit + index} className='bg-white rounded-md h-12 text-center flex items-center px-3'>
-                            <h3 className='font-semibold'>{index}.{fruit} </h3>
+                            <h3 className='font-semibold'>{index + 1}.{fruit} </h3>
                         </div>
                     ))}
                 </div>
